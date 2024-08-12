@@ -28,9 +28,9 @@ body {
   align-items: center;
 }
 .main {
-  max-width: 600px;
+  height: 400px;
+  width: 600px;
   border-radius: 20px;
-  max-width: 35rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0.5rem 1rem 3rem hsla(241, 100%, 89%, 40%);
@@ -45,6 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 .result h3 {
   padding-top: 20px;
