@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Gupter:wght@400;500;700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
+:root {
+  --Lightred: hsl(0, 100%, 67%);
+  --Orangeyyellow: hsl(39, 100%, 56%);
+  --Greenteal: hsl(166, 100%, 37%);
+  --Cobaltblue: hsl(234, 85%, 45%);
+  --Lightslatebluebackground: hsl(252, 100%, 67%);
+  --Lightroyalbluebackground: hsl(241, 81%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Paleblue: hsl(221, 100%, 96%);
+  --Lightlavender: hsl(241, 100%, 89%);
+  --Darkgrayblue: hsl(224, 30%, 27%);
+  --Violetbluecircle: hsla(256, 72%, 46%, 1);
+  --Persianbluecircle: hsl(241, 72%, 46%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  max-width: 600px;
+  border-radius: 20px;
+  max-width: 35rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0.5rem 1rem 3rem hsla(241, 100%, 89%, 40%);
+}
+.result {
+  background-image: linear-gradient(
+    to top,
+    var(--Lightroyalbluebackground),
+    var(--Lightslatebluebackground)
+  );
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result h3 {
+  padding-top: 20px;
+}
+.result .heading {
+  color: var(--Lightlavender);
+  padding-bottom: 20px;
+}
+.score {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(77, 30, 206, 0.9),
+    rgb(78, 33, 202, 0)
+  );
+  padding: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: hsl(241, 35%, 68%);
+}
+.score h1 {
+  color: var(--White);
+  font-size: 2.75em;
+}
+.result p {
+  color: var(--Lightlavender);
+  text-align: center;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+.result h3 {
+  color: var(--White);
+  font-size: 1.6rem;
+}
+.summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "h h h"
+    "r r r"
+    "m m m"
+    "ve ve ve"
+    "v v v"
+    "b b b";
+  padding: 20px;
+}
+.reaction label,
+.reaction svg {
+  color: var(--Lightred);
+}
+.memory label,
+.memory svg {
+  color: var(--Orangeyyellow);
+}
+.visual label,
+.visual svg {
+  color: var(--Cobaltblue);
+}
+.verbal label,
+.verbal svg {
+  color: var(--Greenteal);
+}
+label {
+  padding-left: 5px;
+}
+span {
+  color: var(--Darkgrayblue);
+  margin-left: auto;
+  font-weight: 800;
+  margin-right: 5px;
+}
+.summary h3 {
+  grid-area: h;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  height: 0;
+}
+.summary p {
+  color: hsl(241, 24%, 63%);
+  font-weight: 700;
+}
+.reaction {
+  grid-area: r;
+  background-color: hsla(0, 100%, 67%, 6%);
+}
+.memory {
+  grid-area: m;
+  background-color: hsla(39, 100%, 56%, 6%);
+}
+.visual {
+  grid-area: v;
+  background-color: hsla(234, 85%, 45%, 6%);
+}
+.verbal {
+  grid-area: ve;
+  background-color: hsla(166, 100%, 37%, 6%);
+}
+.reaction,
+.memory,
+.visual,
+.verbal {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+button {
+  grid-area: b;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  padding: 5px;
+  background-color: var(--Darkgrayblue);
+}
+button:hover,
+button:active {
+  background-image: linear-gradient(
+    to top,
+    var(--Lightroyalbluebackground),
+    var(--Lightslatebluebackground)
+  );
+  cursor: pointer;
+}
+@media (max-width: 470px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    min-height: 100dvh;
+    display: block;
+  }
+  .result {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .summary h3 {
+    height: fit-content;
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
+  .reaction,
+  .memory,
+  .visual,
+  .verbal,
+  button {
+    padding: 18px;
+    margin: 0 10px;
+  }
+  body {
+    font-size: 12px;
+  }
+  .summary{
+    gap: 15px;
+    font-size:15px;
+    }
+  .score {
+    width: 50px;
+    height: 50px;
+  }
+  .result p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
