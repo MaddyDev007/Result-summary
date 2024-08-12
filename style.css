@@ -28,8 +28,8 @@ body {
   align-items: center;
 }
 .main {
-  height: 500px;
-  width: 700px;
+  max-width: 600px;
+  max-width: 35rem;
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
